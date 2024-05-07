@@ -1,0 +1,30 @@
+# starts the compose file c:
+# version: "3"
+
+services:
+  database:
+    image: mysql
+    command: --default-auth=mysql_native_password
+#    restart: always
+    hostname: mysql-database
+    environment:
+      MYSQL_ROOT_PASSWORD: changeit
+    networks: 
+      - sdb-network
+#    ports:
+#      - 3306:3306
+
+  hammer-gui:
+    image: tpcorg/hammerdb:latest-cloudtk
+    ports:
+      - 8081:8081 
+      - 8082:8082 
+      - 8080:8080
+    networks: 
+      - sdb-network
+    depends_on:
+      - database
+
+networks:
+  sdb-network:
+    driver: bridge
