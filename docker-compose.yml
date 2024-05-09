@@ -4,15 +4,18 @@
 services:
   database:
     image: mysql
-    command: --default-auth=mysql_native_password
+#    command: --mysql-native-password=ON --mysql-native-password-proxy-users 
 #    restart: always
     hostname: mysql-database
     environment:
-      MYSQL_ROOT_PASSWORD: changeit
+      MYSQL_ROOT_PASSWORD: 1234
+      # MYSQL_ALLOW_EMPTY_PASSWORD: 1
     networks: 
       - sdb-network
-#    ports:
-#      - 3306:3306
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql-certs:/var/lib/mysql
 
   hammer-gui:
     image: tpcorg/hammerdb:latest-cloudtk
@@ -24,6 +27,8 @@ services:
       - sdb-network
     depends_on:
       - database
+    volumes:
+      - ./mysql-certs:/var/lib/mysql
 
 networks:
   sdb-network:
