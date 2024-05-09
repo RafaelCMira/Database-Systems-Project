@@ -1,19 +1,21 @@
-# starts the compose file c:
-# version: "3"
-
 services:
-  database:
+  posgres-db:
+    image: postgres
+    hostname: posgres-database
+    networks: 
+      - sdb-network
+    environment:
+      POSTGRES_PASSWORD: 1234
+
+  mysql-db:
     image: mysql
-#    command: --mysql-native-password=ON --mysql-native-password-proxy-users 
-#    restart: always
     hostname: mysql-database
     environment:
       MYSQL_ROOT_PASSWORD: 1234
-      # MYSQL_ALLOW_EMPTY_PASSWORD: 1
     networks: 
       - sdb-network
-    ports:
-      - 3306:3306
+    # ports:
+    #   - 3306:3306
     volumes:
       - ./mysql-certs:/var/lib/mysql
 
@@ -26,7 +28,8 @@ services:
     networks: 
       - sdb-network
     depends_on:
-      - database
+      - posgres-db
+      - mysql-db
     volumes:
       - ./mysql-certs:/var/lib/mysql
 
