@@ -1,3 +1,5 @@
 - nr-of-warehouses >= virtual-users * 5
 - virtual-user      = if-hyper-threading(1.35 * cores, cores)
 - creating-schema (virtual-user => number of cores)
+- Look at:
+    - Use all warehouses
