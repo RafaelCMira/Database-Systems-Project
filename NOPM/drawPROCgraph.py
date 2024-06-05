@@ -30,7 +30,7 @@ def plot_graph(file, procs, bar_width=0.1, space_within_proc=0.1, space_between_
         for j, metric in enumerate(columns_to_display):
             x = j * (bar_width + space_within_proc) + i * (len(columns_to_display) * (bar_width + space_within_proc) + space_between_procs)
             bar = plt.bar(x, proc_data[metric], color=colors[j], edgecolor='black', linewidth=1, width=bar_width)
-            plt.text(bar[0].get_x() + bar[0].get_width() / 2, bar[0].get_height(), str(proc_data[metric]), ha='center', va='bottom')
+            plt.text(bar[0].get_x() + bar[0].get_width() / 2, bar[0].get_height(), str(round(proc_data[metric], 1)), ha='center', va='bottom')
 
     plt.title('Multiple PROCs')
     plt.xlabel('Metric')
@@ -48,6 +48,11 @@ def main():
     parser.add_argument('--space_within_proc', type=float, default=0.1, help='The space within PROCs')
     parser.add_argument('--space_between_procs', type=float, default=0.2, help='The space between PROCs')
     args = parser.parse_args()  # parse the arguments and assign to args
+
+    # If 'ALL' is passed as an argument, replace it with the list of all processes
+    if args.procs == ['ALL']:
+        args.procs = ['NEWORD', 'PAYMENT', 'SLEV', 'DELIVERY', 'OSTAT']
+
     plot_graph(args.input_file, args.procs, args.bar_width, args.space_within_proc, args.space_between_procs)
 
 if __name__ == "__main__":
