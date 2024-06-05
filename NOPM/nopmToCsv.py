@@ -3,25 +3,35 @@ import csv
 import re
 
 def convert_to_csv(input_file, output_file):
+    summary_started = False
+    summary_ended = False
+
     with open(input_file, 'r') as f, open(output_file, 'w', newline='') as csvfile:
         fieldnames = ['PROC', 'CALLS', 'MIN', 'AVG', 'MAX', 'TOTAL', 'P99', 'P95', 'P50', 'SD', 'RATIO']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
         for line in f:
-            if line.startswith('>>>>> PROC:'):
-                proc = line.split(':')[1].strip()
-                data = next(f).strip().split('\t')
-                row = {'PROC': proc}
-                for item in data:
-                    key, value = item.split(':')
-                    row[key] = value.strip()
-                # Read the next line and extract the data for the remaining columns
-                data = next(f).strip().split('\t')
-                for item in data:
-                    key, value = item.split(':')
-                    row[key] = value.strip()
-                writer.writerow(row)
+            if 'SUMMARY OF' in line:  # Start of summary section
+                summary_started = True
+                continue
+            if summary_started:
+                if 'SUMMARY' in line and not summary_ended:  # End of summary section
+                    summary_ended = True
+                    break
+                if line.startswith('>>>>> PROC:'):
+                    proc = line.split(':')[1].strip()
+                    data = next(f).strip().split('\t')
+                    row = {'PROC': proc}
+                    for item in data:
+                        key, value = item.split(':')
+                        row[key] = value.strip()
+                    # Read the next line and extract the data for the remaining columns
+                    data = next(f).strip().split('\t')
+                    for item in data:
+                        key, value = item.split(':')
+                        row[key] = value.strip()
+                    writer.writerow(row)
 
 def main():
     parser = argparse.ArgumentParser(description='Convert log file to CSV.')
