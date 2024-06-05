@@ -20,11 +20,11 @@ diset tpcc pg_num_vu 8
 diset tpcc pg_driver timed
 
 # Transactions per user
-diset tpcc pg_total_iterations 10000000
+diset tpcc pg_total_iterations 1000000
 # Ramp up minutes
-diset tpcc pg_rampup 1
+diset tpcc pg_rampup 2
 # Test duration
-diset tpcc pg_duration 5
+diset tpcc pg_duration 10
 
 # Use all warehouses (Optional, use in some tests)
 diset tpcc pg_allwarehouse false
@@ -41,7 +41,7 @@ diset tpcc pg_async_client 10
 # 4. Transactions options
 tcset refreshrate 10
 tcset logtotemp 1
-tcset unique 1
+tcset unique 0
 tcset timestamps 1
 
 # Build schema
@@ -57,6 +57,7 @@ vudestroy
 # Load driver script
 loadscript
 
+# 3. Vuser options
 vuset delay 500
 vuset repeat 500
 vuset iterations 1
@@ -66,21 +67,30 @@ vuset unique 0
 vuset nobuff 0
 vuset timestamps 0
 
-puts "SEQUENCE STARTED"
-# Check this because the first value is not used (Why?)
-foreach z { 1 8 16 24 } {
-puts "$z VU TEST"
-# 3. Vuser options
-vuset vu $z
+
 # Start transaction counter
 tcstart
+
+foreach z {8 11 16 24} {
+puts "Starting $z VU TEST"
+
+# Set Vusers
+vuset vu $z
 
 # Run Vusers
 vucreate
 vurun
 
-# Destroy Vusers and stop transaction counter
+# Destroy Vusers
 vudestroy
-tcstop
+
+# Wait for 30s
+puts "Waiting 30s to start new VU test"
+after 30000
 }
-puts "TEST SEQUENCE COMPLETE"
+
+# Stop transaction counter
+tcstop
+
+
+
