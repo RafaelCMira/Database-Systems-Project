@@ -25,10 +25,13 @@ def plot_graph(files):
 
     # Set xticks every minute
     ax.xaxis.set_major_locator(mdates.MinuteLocator(interval=1))   # To get a tick every minute
-    ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))     # Tick format
+    ax.xaxis.set_major_formatter(mdates.DateFormatter('%M'))     # Tick format
 
-    # Add a legend
-    ax.legend()
+    # Add a legend and place it below the plot with horizontal layout
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=len(files), fancybox=True, shadow=True)
+
+    # Adjust the plot to make room for the legend
+    plt.tight_layout()
 
     # Show the plot
     plt.show()
