@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import re
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -48,18 +46,42 @@ def conver_file(src_file : str, output_file : str):
 
 
 def main():
-    pass
-    # frame = pd.read_csv('file.csv')
-    #
-    # rows = frame[ 
-    #     (frame['user-nr'] == 2) & (frame['proc-name'] == 'NEWORD') 
-    #              & (frame['metric-name'] != 'TOTAL')
-    # ].copy()
-    #
-    #
-    # rows.drop(columns=['user-nr', 'proc-name'], inplace=True)
-    # rows.set_index('metric-name', inplace=True)
-    # plt.show()
+
+    # Data
+    data = {
+        'proc-name': 'NEWORD',
+        'CALLS': '116915',
+        'MIN': '1.232',
+        'AVG': '3.828',
+        'MAX': '446.229',
+        'TOTAL': '447559.596',
+        'P99': '12.260',
+        'P95': '5.590',
+        'P50': '3.210',
+        'SD': '59951.357',
+        'RATIO': '57.204'
+    }
+
+# Plot
+    plt.figure(figsize=(10, 6))
+    keys = list(data.keys())[1:]  # Exclude 'proc-name'
+    values = [float(value) for key, value in data.items() if key != 'proc-name']
+    bars = plt.bar(keys, values)
+    plt.title(data['proc-name'])
+    plt.xlabel('Metrics')
+    plt.ylabel('Value (ms)')
+    plt.xticks(rotation=0)  # Rotate x-axis labels to be horizontal
+
+    # Annotate bars with their values
+    for bar in bars:
+        yval = bar.get_height()
+        xval = bar.get_x() + bar.get_width() / 2
+        plt.text(xval, yval, round(yval, 2), ha='center', va='bottom')
+
+    # Adjust y-axis limits
+    plt.ylim(0, max(values) * 1.1)  # Extend the limit by 10% for better visibility
+
+    plt.show()
 
 if __name__ == '__main__':
     main()
