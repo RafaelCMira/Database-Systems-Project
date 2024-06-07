@@ -14,9 +14,9 @@ def plot_graph(files):
         # Convert the 'Timestamp' column to datetime
         data['time'] = pd.to_datetime(data['time'], unit='s')
 
-        number = re.search(r'\d+', file).group()
+        vUsers = re.search(r'\d+', file).group()
 
-        ax.plot(data['time'], data['TPM'], label= number + " vusers")
+        ax.plot(data['time'], data['TPM'], label= vUsers + " vusers")
 
     # Set the title and labels
     ax.set_title('TPM during execution')
