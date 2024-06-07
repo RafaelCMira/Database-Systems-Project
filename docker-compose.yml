@@ -7,18 +7,6 @@ services:
     environment:
       POSTGRES_PASSWORD: 1234
 
-  mysql-db:
-    image: mysql
-    hostname: mysql-database
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-    networks: 
-      - sdb-network
-    # ports:
-    #   - 3306:3306
-    volumes:
-      - ./mysql-certs:/var/lib/mysql
-
   hammer-gui:
     image: tpcorg/hammerdb:latest-cloudtk
     ports:
@@ -29,10 +17,10 @@ services:
       - sdb-network
     depends_on:
       - posgres-db
-      - mysql-db
     volumes:
-      - ./mysql-certs:/var/lib/mysql
+      - ./tcl-scripts:/tcl-scripts
 
 networks:
   sdb-network:
-    driver: bridge
+    driver: overlay
+

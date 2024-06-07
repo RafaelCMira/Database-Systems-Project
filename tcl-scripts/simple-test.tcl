@@ -7,12 +7,25 @@ dbset db pg
 # Set the benchmark
 dbset bm TPC-C
 
+
+diset connection pg_host posgres-database
+diset connection pg_port 5432
+diset connection pg_sslmode prefer
+
+diset tpcc pg_superuser postgres
+diset tpcc pg_superuserpass 1234
+diset tpcc pg_defaultdb postgres
+diset tpcc pg_user tpcc
+diset tpcc pg_pass tpcc
+diset tpcc pg_dbase tpcc
+diset tpcc pg_tspace pg_default
+
 # 1. Schema
 
 # Number of warehouses
-diset tpcc pg_count_ware 40
+diset tpcc pg_count_ware 10
 # Number of vusers
-diset tpcc pg_num_vu 8
+diset tpcc pg_num_vu 5
 
 
 # 2. Driver script Options
@@ -20,11 +33,11 @@ diset tpcc pg_num_vu 8
 diset tpcc pg_driver timed
 
 # Transactions per user
-diset tpcc pg_total_iterations 1000000
+diset tpcc pg_total_iterations 10000
 # Ramp up minutes
-diset tpcc pg_rampup 2
+diset tpcc pg_rampup 1
 # Test duration
-diset tpcc pg_duration 10
+diset tpcc pg_duration 3
 
 # Use all warehouses (Optional, use in some tests)
 diset tpcc pg_allwarehouse false
@@ -36,7 +49,6 @@ diset tpcc pg_timeprofile true
 diset tpcc pg_async_scale false
 # Clients per virtual user
 diset tpcc pg_async_client 10
-
 
 # 4. Transactions options
 tcset refreshrate 10
@@ -71,26 +83,23 @@ vuset timestamps 0
 # Start transaction counter
 tcstart
 
-foreach z {8 11 16 24} {
-puts "Starting $z VU TEST"
+foreach z {1 5} {
+    puts "Starting $z VU TEST"
 
-# Set Vusers
-vuset vu $z
+    # Set Vusers
+    vuset vu $z
 
-# Run Vusers
-vucreate
-vurun
+    # Run Vusers
+    vucreate
+    vurun
 
-# Destroy Vusers
-vudestroy
+    # Destroy Vusers
+    vudestroy
 
-# Wait for 30s
-puts "Waiting 30s to start new VU test"
-after 30000
+    # Wait for 30s
+    puts "Waiting 30s to start new VU test"
+    after 30000
 }
 
 # Stop transaction counter
 tcstop
-
-
-
