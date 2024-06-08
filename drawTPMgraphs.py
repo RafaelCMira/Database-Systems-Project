@@ -14,6 +14,10 @@ def plot_graph(files):
         # Convert the 'Timestamp' column to datetime
         data['time'] = pd.to_datetime(data['time'], unit='s')
 
+        # Aggregate the data by minute and compute the average TPM
+        data.set_index('time', inplace=True)
+        data = data.resample('min').mean().reset_index()
+
         vUsers = re.search(r'\d+', file).group()
 
         ax.plot(data['time'], data['TPM'], label= vUsers + " vusers")

@@ -1,11 +1,16 @@
 services:
   posgres-db:
     image: postgres
+    # need to be able to do restart on container
     hostname: posgres-database
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf    
     networks: 
       - sdb-network
     environment:
       POSTGRES_PASSWORD: 1234
+    volumes:
+      - ./stats-logs:/exp-logs
+      - ./psql-config/postgresql.conf:/etc/postgresql/postgresql.conf
 
   hammer-gui:
     image: tpcorg/hammerdb:latest-cloudtk

@@ -1,7 +1,7 @@
 import csv
 import sys
 
-EXPERIMENT_BREAKER = 100
+EXPERIMENT_BREAKER = 300
 
 def convert_to_csv(input_file, experiment_numbers):
     with open(input_file, 'r') as infile:
