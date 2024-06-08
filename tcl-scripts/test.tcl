@@ -67,6 +67,7 @@ buildschema
 vudestroy
 
 # Load driver script
+vudestroy
 loadscript
 
 # 3. Vuser options
@@ -102,6 +103,8 @@ foreach z {8 16 32 64 100} {
     puts "Waiting 1 minute to destroy VU"
     after 60000
 }
+
+vudestroy
 
 # Stop transaction counter
 tcstop
