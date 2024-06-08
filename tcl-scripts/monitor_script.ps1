@@ -3,7 +3,8 @@ param(
     [string]$OutputFileName
 )
 
-$basePath = "C:\Users\Rafael\AppData\Local\Temp\"
+$user = "Rafael"
+$basePath = "C:\Users\$user\AppData\Local\Temp\"
 
 $outputFile = Join-Path -Path $basePath -ChildPath $OutputFileName
 $interval = 5  # Interval in seconds
