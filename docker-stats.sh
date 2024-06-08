@@ -13,6 +13,6 @@ echo "Timestamp,CPU%,MemUsage,NetIO,BlockIO,PIDs" > $output_file
 while true; do
     timestamp=$(date '+%s')
     line=$(docker stats --no-stream --format \
-            "{{.CPUPerc}};{{.MemUsage}};{{.NetIO}};{{.BlockIO}};{{.PIDs}}")
+            "{{.CPUPerc}},{{.MemUsage}},{{.NetIO}},{{.BlockIO}},{{.PIDs}}")
     echo "$timestamp;$line" >> $output_file
 done
