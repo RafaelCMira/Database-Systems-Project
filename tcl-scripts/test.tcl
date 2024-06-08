@@ -67,6 +67,7 @@ buildschema
 vudestroy
 
 # Load driver script
+vudestroy
 loadscript
 
 # 3. Vuser options
