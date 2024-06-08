@@ -35,9 +35,9 @@ diset tpcc pg_driver timed
 # Transactions per user
 diset tpcc pg_total_iterations 1000000
 # Ramp up minutes
-diset tpcc pg_rampup 2
+diset tpcc pg_rampup 1
 # Test duration
-diset tpcc pg_duration 10
+diset tpcc pg_duration 9
 
 # Use all warehouses (Optional, use in some tests)
 diset tpcc pg_allwarehouse false
