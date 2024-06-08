@@ -19,6 +19,7 @@ services:
       - posgres-db
     volumes:
       - ./tcl-scripts:/tcl-scripts
+      - ./stats-logs:/exp-logs
 
 networks:
   sdb-network:

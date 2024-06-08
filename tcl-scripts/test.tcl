@@ -101,7 +101,7 @@ foreach z {8 16 32 64 100} {
     vurun
 
     puts "Waiting 1 minute to destroy VU"
-    after 60000
+    after 120000
 }
 
 vudestroy
