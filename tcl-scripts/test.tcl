@@ -103,5 +103,7 @@ foreach z {8 16 32 64 100} {
     after 60000
 }
 
+vudestroy
+
 # Stop transaction counter
 tcstop
