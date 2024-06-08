@@ -83,22 +83,24 @@ vuset timestamps 0
 # Start transaction counter
 tcstart
 
-foreach z {8 16 32 64} {
+foreach z {8 16 32 64 100} {
     puts "Starting $z VU TEST"
 
+    puts "Destroying VU"
+    # Destroy Vusers
+    vudestroy
+
+    puts "Setting $z VU"
     # Set Vusers
     vuset vu $z
 
+    puts "Creating and running $z VU"
     # Run Vusers
     vucreate
     vurun
 
-    # Destroy Vusers
-    vudestroy
-
-    # Wait for 30s
-    puts "Waiting 30s to start new VU test"
-    after 30000
+    puts "Waiting 1 minute to destroy VU"
+    after 60000
 }
 
 # Stop transaction counter
