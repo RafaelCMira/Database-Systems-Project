@@ -28,8 +28,12 @@ for %%f in ("%file1%" "%file2%" "%file3%" "%file4%" "%file5%") do (
 REM Change to HammerDB directory
 cd "C:\Program Files\HammerDB-4.10"
 
-REM Start hammerdbcli.bat in the background and get its process ID
-start "" hammerdbcli.bat auto "C:\Users\%user%\Desktop\test.tcl" > "C:\Users\%user%\AppData\Local\Temp\%file1%" 2>&1
+REM Create a temporary batch file to run hammerdbcli.bat and redirect output
+echo hammerdbcli.bat auto "C:\Users\%user%\Desktop\test.tcl" ^> "C:\Users\%user%\AppData\Local\Temp\%file1%" 2^>^&1 > "%directory%\run_hammerdb.bat"
+
+
+REM Start the temporary batch file in the background
+start "" cmd /c "%directory%\run_hammerdb.bat"
 
 REM Add 2 seconds of wait to let the process be created
 timeout /T 2 /NOBREAK >NUL
@@ -51,10 +55,10 @@ echo. > "%directory%\monitor_%PID%.stop"
 echo. > "%directory%\monitor_%postgres_pid%.stop"
 
 REM Start the monitoring script for HammerDB
-powershell -ExecutionPolicy Bypass -File "C:\Users\%user%\Desktop\monitor_script.ps1" -ProcessID %PID% -OutputFileName "hammermetrics.csv" -StopFile "%directory%\monitor_%PID%.stop"
+start "" powershell -ExecutionPolicy Bypass -File "C:\Users\%user%\Desktop\monitor_script.ps1" -ProcessID %PID% -OutputFileName "hammermetrics.csv" -StopFile "%directory%\monitor_%PID%.stop"
 
 REM Start the monitoring script for PostgreSQL
-powershell -ExecutionPolicy Bypass -File "C:\Users\%user%\Desktop\monitor_script.ps1" -ProcessID 5596 -OutputFileName "hservermetrics.csv" -StopFile "%directory%\monitor_%postgres_pid%.stop"
+start "" powershell -ExecutionPolicy Bypass -File "C:\Users\%user%\Desktop\monitor_script.ps1" -ProcessID %postgres_pid% -OutputFileName "hservermetrics.csv" -StopFile "%directory%\monitor_%postgres_pid%.stop"
 
 REM Wait for tclsh86t process to stop
 :wait
@@ -67,5 +71,8 @@ if "%ERRORLEVEL%"=="0" (
 REM Once tclsh86t process stops, delete the stop files to signal the monitoring scripts to stop
 del "%directory%\monitor_%PID%.stop"
 del "%directory%\monitor_%postgres_pid%.stop"
+
+REM Clean up temporary batch file
+del "%directory%\run_hammerdb.bat"
 
 endlocal
