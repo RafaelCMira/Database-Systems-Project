@@ -1,6 +1,8 @@
 import csv
 import sys
 
+EXPERIMENT_BREAKER = 100
+
 def convert_to_csv(input_file, experiment_numbers):
     with open(input_file, 'r') as infile:
         lines = infile.readlines()
@@ -21,7 +23,7 @@ def convert_to_csv(input_file, experiment_numbers):
         counter = int(parts[0])
 
         # Check for separators indicating the end of an experiment
-        if counter <= 10 and current_experiment:
+        if counter <= EXPERIMENT_BREAKER and current_experiment:
             if len(current_experiment) > 1:  # Skip the separator values at the start of each experiment
                 experiment_data.append(current_experiment)
             current_experiment = []
