@@ -1,10 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import argparse
-import numpy as np
 import re
 
-def plot_graph(file, procs, bar_width=0.1, space_within_proc=0.1, space_between_procs=0.5):
+def plot_graph(file, procs, bar_width=0.1, space_within_proc=0.1, space_between_procs=0.5, output_file=None):
     data = pd.read_csv(file)
 
     vUsers = re.search(r'\d+', file).group()
@@ -35,7 +34,7 @@ def plot_graph(file, procs, bar_width=0.1, space_within_proc=0.1, space_between_
             bar = plt.bar(x, proc_data[metric], color=colors[j], edgecolor='black', linewidth=1, width=bar_width, label=metric if i == 0 else "")
             plt.text(bar[0].get_x() + bar[0].get_width() / 2, bar[0].get_height(), str(round(proc_data[metric], 1)), ha='center', va='bottom')
 
-    plt.title(f'{vUsers} virtual user Procedures')
+    plt.title(f'{vUsers} vusers Procedures')
     plt.ylabel('Milliseconds')
     plt.xticks([i * (len(columns_to_display) * (bar_width + space_within_proc) + space_between_procs) + (len(columns_to_display) * (bar_width + space_within_proc) / 2) - bar_width/2 for i in range(len(procs))],
                procs)  # set the x-ticks to be the PROCs
@@ -43,7 +42,11 @@ def plot_graph(file, procs, bar_width=0.1, space_within_proc=0.1, space_between_
     # Add legend below the graph
     plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05), ncol=len(columns_to_display))
 
-    plt.show()
+    # Save the plot to a PDF file if output_file is specified
+    if output_file:
+        plt.savefig(output_file, format='pdf')
+    else:
+        plt.show()
 
 def main():
     parser = argparse.ArgumentParser(description='Plot graph for specific processes from a CSV file.')
@@ -52,13 +55,14 @@ def main():
     parser.add_argument('--bar_width', type=float, default=0.5, help='The width of the bars')
     parser.add_argument('--space_within_proc', type=float, default=0.1, help='The space within PROCs')
     parser.add_argument('--space_between_procs', type=float, default=0.2, help='The space between PROCs')
+    parser.add_argument('-export', metavar='output_file', help='Export the graph to a PDF file')
     args = parser.parse_args()  # parse the arguments and assign to args
 
     # If 'ALL' is passed as an argument, replace it with the list of all processes
     if args.procs == ['ALL']:
         args.procs = ['NEWORD', 'PAYMENT', 'SLEV', 'DELIVERY', 'OSTAT']
 
-    plot_graph(args.input_file, args.procs, args.bar_width, args.space_within_proc, args.space_between_procs)
+    plot_graph(args.input_file, args.procs, args.bar_width, args.space_within_proc, args.space_between_procs, args.export)
 
 if __name__ == "__main__":
     main()

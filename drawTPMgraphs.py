@@ -1,11 +1,10 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
 import matplotlib.dates as mdates
 import argparse
 import re
 
-def plot_graph(files, output_file=None, export_only=False):
+def plot_graph(files, output_file=None):
     fig, ax = plt.subplots(figsize=(7, 4))  # Set the figure size
 
     for file in files:
@@ -40,19 +39,17 @@ def plot_graph(files, output_file=None, export_only=False):
     # Save the plot to a PDF file if output_file is specified
     if output_file:
         plt.savefig(output_file, format='pdf')
-
-    # Show the plot if export_only is False
-    if not export_only:
+    else:
+        # Show the plot if output_file is not specified
         plt.show()
 
 def main():
     parser = argparse.ArgumentParser(description='Plot graph from CSV files.')
     parser.add_argument('files', nargs='+', help='The CSV files to plot')
-    parser.add_argument('-output', help='The output PDF file')
-    parser.add_argument('-export', action='store_true', help='Only export the graph to a PDF, do not display it')
+    parser.add_argument('-export', metavar='output_file', help='Export the graph to a PDF file')
     args = parser.parse_args()
 
-    plot_graph(args.files, args.output, args.export)
+    plot_graph(args.files, args.export)
 
 if __name__ == "__main__":
     main()
