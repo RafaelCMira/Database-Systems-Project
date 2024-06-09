@@ -13,6 +13,7 @@ DATETIME_FMT = '%a %b %d %H:%M:%S %Z %Y'
 PATTERN = re.compile(r"(\d+) PostgreSQL tpm @ (.+)")
 
 USED_VIRTUAL_USERS = [8, 16, 32, 64, 100]
+cpu_cores = 0
 
 class StatsHeader:
     TIME_STAMP = 'Timestamp'
@@ -132,20 +133,29 @@ def read_stats_file(filename : str) -> pd.DataFrame:
     data[hd.MEM] = mem_giba_bytes.round(2)
 
     data[hd.CPU] = data[hd.CPU].apply(
-        lambda value : value[:-1]
-    )
+        lambda value : float(value[:-1]) / cpu_cores
+    ).round(2)
 
     return data
 
 def main(args: list[str]):
+    global cpu_cores
     if len(args) < 2:
         print('Error: Missing arguments!', file=sys.stderr)
         print(f'usage: {args[0]} <dir-name>', file=sys.stderr)
         sys.exit(1)
 
     dirname = args[1]
-    print(f"Handling files from '{dirname}'")
 
+    if 'lugia' in dirname:
+        cpu_cores = 64
+    elif 'charmader' in dirname:
+        cpu_cores = 32
+    else:
+        print("Couldn't detect cpu cores")
+        sys.exit(1)
+
+    print(f"Handling files from '{dirname}' assuming {cpu_cores} cpu cores")
     tpm_count_file  = path.join(dirname, 'tpm/hdbtcount.log')
     status_log_file = path.join(dirname, 'docker-stats.log')
 
