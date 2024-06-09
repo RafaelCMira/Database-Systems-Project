@@ -65,7 +65,7 @@ def load_intervals(filename : str ) -> list[tuple[int, int]]:
 
     return intervals
 
-def str_to_mega_bytes( value : str ) -> float:
+def str_to_giba_bytes( value : str ) -> float:
     i = 0
     while value[i].isdigit() or value[i] == '.':
         i += 1
@@ -86,12 +86,12 @@ def str_to_mega_bytes( value : str ) -> float:
     else:
         assert False, f'Something is clearly wrong {value}'
 
-    return base * numeric_value / 2 ** 20
+    return base * numeric_value / 2 ** 30
 
 
 def convert_io( value : str ) -> float:
     [input, output] = value.split('/')
-    return str_to_mega_bytes(input.strip()) + str_to_mega_bytes(output.strip())
+    return str_to_giba_bytes(input.strip()) + str_to_giba_bytes(output.strip())
 
 def process_stats_data( stats : pd.DataFrame, intervals : list[tuple[int, int]]) -> pd.DataFrame:
     results = []
@@ -107,7 +107,9 @@ def process_stats_data( stats : pd.DataFrame, intervals : list[tuple[int, int]])
         data[hd.TIME_STAMP] = round(
             (data[hd.TIME_STAMP] - start) / 60, 0
         ).astype(int)
+
         data[hd.MEM] -= data[hd.MEM].iloc[0]
+        data[hd.IO]  -= data[hd.IO].iloc[0]
 
         results.append(
             data
@@ -119,15 +121,15 @@ def process_stats_data( stats : pd.DataFrame, intervals : list[tuple[int, int]])
 def read_stats_file(filename : str) -> pd.DataFrame:
     data = pd.read_csv(filename)
     data[hd.VU]  = 0
-    io_per_second  = data[hd.IO].apply(convert_io).diff() / data[hd.TIME_STAMP].diff()
-    mem_mega_bytes = data[hd.MEM].apply(
-        lambda value : str_to_mega_bytes(
+    io_per_second  = data[hd.IO].apply(convert_io)
+    mem_giba_bytes = data[hd.MEM].apply(
+        lambda value : str_to_giba_bytes(
             value.split('/', maxsplit=1)[0].strip()
         )
     ) 
 
     data[hd.IO]  =  io_per_second.round(2)
-    data[hd.MEM] = mem_mega_bytes.round(2)
+    data[hd.MEM] = mem_giba_bytes.round(2)
 
     data[hd.CPU] = data[hd.CPU].apply(
         lambda value : value[:-1]
