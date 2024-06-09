@@ -1,0 +1,1617 @@
+HammerDB CLI v4.10
+Copyright (C) 2003-2024 Steve Shaw
+Type "help" for a list of commands
+Initialized Jobs on-disk database C:/Users/Rafael/AppData/Local/Temp/hammer.DB using existing tables (10,878,976 KB)
+Database set to PostgreSQL
+Benchmark set to TPC-C for PostgreSQL
+Value 40 for tpcc:pg_count_ware is the same as existing value 40, no change made
+Value 8 for tpcc:pg_num_vu is the same as existing value 8, no change made
+Value timed for tpcc:pg_driver is the same as existing value timed, no change made
+Value 1000000 for tpcc:pg_total_iterations is the same as existing value 1000000, no change made
+Value 1 for tpcc:pg_rampup is the same as existing value 1, no change made
+Changed tpcc:pg_duration from 3 to 9 for PostgreSQL
+Changed tpcc:pg_allwarehouse from true to false for PostgreSQL
+Value true for tpcc:pg_timeprofile is the same as existing value true, no change made
+Value false for tpcc:pg_async_scale is the same as existing value false, no change made
+Value 10 for tpcc:pg_async_client is the same as existing value 10, no change made
+Transaction Counter refresh rate set to 10
+Transaction Counter log to temp set to 1
+Transaction Counter unique log name set to 0
+Transaction Counter timestamps set to 1
+No Virtual Users found to destroy
+Script loaded, Type "print script" to view
+Transaction Counter logging activated to C:/Users/Rafael/AppData/Local/Temp/hdbtcount.log
+Transaction Counter Started
+Starting 8 VU TEST
+Destroying VU
+No Virtual Users found to destroy
+Setting 8 VU
+Creating and running 8 VU
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Vuser 3 created - WAIT IDLE
+Vuser 4 created - WAIT IDLE
+Vuser 5 created - WAIT IDLE
+Vuser 6 created - WAIT IDLE
+Vuser 7 created - WAIT IDLE
+Vuser 8 created - WAIT IDLE
+Vuser 9 created - WAIT IDLE
+9 Virtual Users Created with Monitor VU
+0 PostgreSQL tpm
+Vuser 1:RUNNING
+Vuser 1:Initializing xtprof time profiler
+Vuser 1:Beginning rampup time of 1 minutes
+Vuser 2:RUNNING
+Vuser 2:Initializing xtprof time profiler
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 3:RUNNING
+Vuser 3:Initializing xtprof time profiler
+Vuser 3:Processing 1000000 transactions with output suppressed...
+Vuser 4:RUNNING
+Vuser 4:Initializing xtprof time profiler
+Vuser 4:Processing 1000000 transactions with output suppressed...
+Vuser 5:RUNNING
+Vuser 5:Initializing xtprof time profiler
+Vuser 5:Processing 1000000 transactions with output suppressed...
+Vuser 6:RUNNING
+Vuser 6:Initializing xtprof time profiler
+Vuser 6:Processing 1000000 transactions with output suppressed...
+Vuser 7:RUNNING
+Vuser 7:Initializing xtprof time profiler
+Vuser 7:Processing 1000000 transactions with output suppressed...
+Vuser 8:RUNNING
+Vuser 8:Initializing xtprof time profiler
+Vuser 8:Processing 1000000 transactions with output suppressed...
+Vuser 9:RUNNING
+Vuser 9:Initializing xtprof time profiler
+Vuser 9:Processing 1000000 transactions with output suppressed...
+127044 PostgreSQL tpm
+201786 PostgreSQL tpm
+203796 PostgreSQL tpm
+196434 PostgreSQL tpm
+194028 PostgreSQL tpm
+Vuser 1:Rampup 1 minutes complete ...
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Vuser 1:Timing test period of 9 in minutes
+194328 PostgreSQL tpm
+190290 PostgreSQL tpm
+199764 PostgreSQL tpm
+198132 PostgreSQL tpm
+205776 PostgreSQL tpm
+206274 PostgreSQL tpm
+Vuser 1:1 ...,
+210390 PostgreSQL tpm
+220086 PostgreSQL tpm
+227022 PostgreSQL tpm
+183162 PostgreSQL tpm
+147852 PostgreSQL tpm
+127788 PostgreSQL tpm
+Vuser 1:2 ...,
+111498 PostgreSQL tpm
+179598 PostgreSQL tpm
+193812 PostgreSQL tpm
+185670 PostgreSQL tpm
+176424 PostgreSQL tpm
+149976 PostgreSQL tpm
+Vuser 1:3 ...,
+133860 PostgreSQL tpm
+115980 PostgreSQL tpm
+106698 PostgreSQL tpm
+95322 PostgreSQL tpm
+103500 PostgreSQL tpm
+98928 PostgreSQL tpm
+Vuser 1:4 ...,
+94800 PostgreSQL tpm
+60948 PostgreSQL tpm
+87498 PostgreSQL tpm
+85938 PostgreSQL tpm
+146472 PostgreSQL tpm
+169386 PostgreSQL tpm
+Vuser 1:5 ...,
+188094 PostgreSQL tpm
+178440 PostgreSQL tpm
+190260 PostgreSQL tpm
+158646 PostgreSQL tpm
+143076 PostgreSQL tpm
+125958 PostgreSQL tpm
+Vuser 1:6 ...,
+124950 PostgreSQL tpm
+121452 PostgreSQL tpm
+110820 PostgreSQL tpm
+100362 PostgreSQL tpm
+99396 PostgreSQL tpm
+92004 PostgreSQL tpm
+Vuser 1:7 ...,
+90060 PostgreSQL tpm
+108498 PostgreSQL tpm
+171432 PostgreSQL tpm
+185958 PostgreSQL tpm
+189876 PostgreSQL tpm
+193878 PostgreSQL tpm
+Vuser 1:8 ...,
+187896 PostgreSQL tpm
+154842 PostgreSQL tpm
+151086 PostgreSQL tpm
+183594 PostgreSQL tpm
+181062 PostgreSQL tpm
+186414 PostgreSQL tpm
+Vuser 1:9 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Vuser 1:8 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 65264 NOPM from 150187 PostgreSQL TPM
+Vuser 1:Gathering timing data from Active Virtual Users...
+Vuser 4:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+Vuser 7:FINISHED SUCCESS
+Vuser 3:FINISHED SUCCESS
+Vuser 6:FINISHED SUCCESS
+Vuser 9:FINISHED SUCCESS
+Vuser 5:FINISHED SUCCESS
+Vuser 8:FINISHED SUCCESS
+Vuser 1:Calculating timings...
+Vuser 1:Writing timing data to C:/Users/Rafael/AppData/Local/Temp/hdbxtprofile.log
+96138 PostgreSQL tpm
+Vuser 1:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+Waiting 1 minute to destroy VU
+Starting 16 VU TEST
+Destroying VU
+12 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+vudestroy success
+Setting 16 VU
+Creating and running 16 VU
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Vuser 3 created - WAIT IDLE
+Vuser 4 created - WAIT IDLE
+Vuser 5 created - WAIT IDLE
+Vuser 6 created - WAIT IDLE
+Vuser 7 created - WAIT IDLE
+Vuser 8 created - WAIT IDLE
+Vuser 9 created - WAIT IDLE
+Vuser 10 created - WAIT IDLE
+Vuser 11 created - WAIT IDLE
+Vuser 12 created - WAIT IDLE
+Vuser 13 created - WAIT IDLE
+Vuser 14 created - WAIT IDLE
+Vuser 15 created - WAIT IDLE
+Vuser 16 created - WAIT IDLE
+Vuser 17 created - WAIT IDLE
+17 Virtual Users Created with Monitor VU
+Vuser 1:RUNNING
+Vuser 1:Initializing xtprof time profiler
+Vuser 1:Beginning rampup time of 1 minutes
+Vuser 2:RUNNING
+Vuser 2:Initializing xtprof time profiler
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 3:RUNNING
+Vuser 3:Initializing xtprof time profiler
+Vuser 3:Processing 1000000 transactions with output suppressed...
+Vuser 4:RUNNING
+Vuser 4:Initializing xtprof time profiler
+Vuser 4:Processing 1000000 transactions with output suppressed...
+Vuser 5:RUNNING
+Vuser 5:Initializing xtprof time profiler
+Vuser 5:Processing 1000000 transactions with output suppressed...
+Vuser 6:RUNNING
+Vuser 6:Initializing xtprof time profiler
+Vuser 6:Processing 1000000 transactions with output suppressed...
+Vuser 7:RUNNING
+Vuser 7:Initializing xtprof time profiler
+Vuser 7:Processing 1000000 transactions with output suppressed...
+Vuser 8:RUNNING
+Vuser 8:Initializing xtprof time profiler
+Vuser 8:Processing 1000000 transactions with output suppressed...
+Vuser 9:RUNNING
+Vuser 9:Initializing xtprof time profiler
+Vuser 9:Processing 1000000 transactions with output suppressed...
+Vuser 10:RUNNING
+Vuser 10:Initializing xtprof time profiler
+Vuser 10:Processing 1000000 transactions with output suppressed...
+Vuser 11:RUNNING
+Vuser 11:Initializing xtprof time profiler
+Vuser 11:Processing 1000000 transactions with output suppressed...
+Vuser 12:RUNNING
+Vuser 12:Initializing xtprof time profiler
+Vuser 12:Processing 1000000 transactions with output suppressed...
+Vuser 13:RUNNING
+Vuser 13:Initializing xtprof time profiler
+Vuser 13:Processing 1000000 transactions with output suppressed...
+Vuser 14:RUNNING
+46050 PostgreSQL tpm
+Vuser 14:Initializing xtprof time profiler
+Vuser 14:Processing 1000000 transactions with output suppressed...
+Vuser 15:RUNNING
+Vuser 15:Initializing xtprof time profiler
+Vuser 15:Processing 1000000 transactions with output suppressed...
+Vuser 16:RUNNING
+Vuser 16:Initializing xtprof time profiler
+Vuser 16:Processing 1000000 transactions with output suppressed...
+Vuser 17:RUNNING
+Vuser 17:Initializing xtprof time profiler
+Vuser 17:Processing 1000000 transactions with output suppressed...
+164502 PostgreSQL tpm
+182490 PostgreSQL tpm
+180462 PostgreSQL tpm
+192858 PostgreSQL tpm
+204696 PostgreSQL tpm
+Vuser 1:Rampup 1 minutes complete ...
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Vuser 1:Timing test period of 9 in minutes
+186096 PostgreSQL tpm
+179940 PostgreSQL tpm
+201582 PostgreSQL tpm
+179628 PostgreSQL tpm
+183312 PostgreSQL tpm
+188034 PostgreSQL tpm
+Vuser 1:1 ...,
+166224 PostgreSQL tpm
+150480 PostgreSQL tpm
+145170 PostgreSQL tpm
+123570 PostgreSQL tpm
+134724 PostgreSQL tpm
+121482 PostgreSQL tpm
+Vuser 1:2 ...,
+148464 PostgreSQL tpm
+182646 PostgreSQL tpm
+188418 PostgreSQL tpm
+192798 PostgreSQL tpm
+177372 PostgreSQL tpm
+Vuser 1:3 ...,
+190734 PostgreSQL tpm
+178410 PostgreSQL tpm
+183396 PostgreSQL tpm
+179376 PostgreSQL tpm
+182136 PostgreSQL tpm
+172410 PostgreSQL tpm
+Vuser 1:4 ...,
+185958 PostgreSQL tpm
+182166 PostgreSQL tpm
+188874 PostgreSQL tpm
+179760 PostgreSQL tpm
+182964 PostgreSQL tpm
+191430 PostgreSQL tpm
+Vuser 1:5 ...,
+181146 PostgreSQL tpm
+174264 PostgreSQL tpm
+184614 PostgreSQL tpm
+192714 PostgreSQL tpm
+192516 PostgreSQL tpm
+185160 PostgreSQL tpm
+Vuser 1:6 ...,
+184308 PostgreSQL tpm
+201678 PostgreSQL tpm
+172986 PostgreSQL tpm
+187722 PostgreSQL tpm
+186468 PostgreSQL tpm
+188172 PostgreSQL tpm
+Vuser 1:7 ...,
+181836 PostgreSQL tpm
+177420 PostgreSQL tpm
+188598 PostgreSQL tpm
+187854 PostgreSQL tpm
+178230 PostgreSQL tpm
+180090 PostgreSQL tpm
+Vuser 1:8 ...,
+189216 PostgreSQL tpm
+203886 PostgreSQL tpm
+175602 PostgreSQL tpm
+174978 PostgreSQL tpm
+192516 PostgreSQL tpm
+188436 PostgreSQL tpm
+Vuser 1:9 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Vuser 1:16 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 76338 NOPM from 175499 PostgreSQL TPM
+Vuser 1:Gathering timing data from Active Virtual Users...
+Vuser 12:FINISHED SUCCESS
+Vuser 16:FINISHED SUCCESS
+Vuser 17:FINISHED SUCCESS
+Vuser 11:FINISHED SUCCESS
+Vuser 3:FINISHED SUCCESS
+Vuser 5:FINISHED SUCCESS
+Vuser 8:FINISHED SUCCESS
+Vuser 6:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+Vuser 10:FINISHED SUCCESS
+Vuser 4:FINISHED SUCCESS
+Vuser 13:FINISHED SUCCESS
+Vuser 14:FINISHED SUCCESS
+Vuser 7:FINISHED SUCCESS
+Vuser 9:FINISHED SUCCESS
+Vuser 15:FINISHED SUCCESS
+Vuser 1:Calculating timings...
+Vuser 1:Writing timing data to C:/Users/Rafael/AppData/Local/Temp/hdbxtprofile.log
+75114 PostgreSQL tpm
+Vuser 1:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+Waiting 1 minute to destroy VU
+Starting 32 VU TEST
+Destroying VU
+12 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+vudestroy success
+Setting 32 VU
+Creating and running 32 VU
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Vuser 3 created - WAIT IDLE
+Vuser 4 created - WAIT IDLE
+Vuser 5 created - WAIT IDLE
+Vuser 6 created - WAIT IDLE
+Vuser 7 created - WAIT IDLE
+Vuser 8 created - WAIT IDLE
+Vuser 9 created - WAIT IDLE
+Vuser 10 created - WAIT IDLE
+Vuser 11 created - WAIT IDLE
+Vuser 12 created - WAIT IDLE
+Vuser 13 created - WAIT IDLE
+Vuser 14 created - WAIT IDLE
+Vuser 15 created - WAIT IDLE
+Vuser 16 created - WAIT IDLE
+Vuser 17 created - WAIT IDLE
+Vuser 18 created - WAIT IDLE
+Vuser 19 created - WAIT IDLE
+Vuser 20 created - WAIT IDLE
+Vuser 21 created - WAIT IDLE
+Vuser 22 created - WAIT IDLE
+Vuser 23 created - WAIT IDLE
+Vuser 24 created - WAIT IDLE
+Vuser 25 created - WAIT IDLE
+Vuser 26 created - WAIT IDLE
+Vuser 27 created - WAIT IDLE
+Vuser 28 created - WAIT IDLE
+Vuser 29 created - WAIT IDLE
+Vuser 30 created - WAIT IDLE
+Vuser 31 created - WAIT IDLE
+Vuser 32 created - WAIT IDLE
+Vuser 33 created - WAIT IDLE
+33 Virtual Users Created with Monitor VU
+Vuser 1:RUNNING
+Vuser 1:Initializing xtprof time profiler
+Vuser 1:Beginning rampup time of 1 minutes
+Vuser 2:RUNNING
+Vuser 2:Initializing xtprof time profiler
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 3:RUNNING
+Vuser 3:Initializing xtprof time profiler
+Vuser 3:Processing 1000000 transactions with output suppressed...
+Vuser 4:RUNNING
+Vuser 4:Initializing xtprof time profiler
+Vuser 4:Processing 1000000 transactions with output suppressed...
+Vuser 5:RUNNING
+Vuser 5:Initializing xtprof time profiler
+Vuser 5:Processing 1000000 transactions with output suppressed...
+Vuser 6:RUNNING
+Vuser 6:Initializing xtprof time profiler
+Vuser 6:Processing 1000000 transactions with output suppressed...
+Vuser 7:RUNNING
+Vuser 7:Initializing xtprof time profiler
+Vuser 7:Processing 1000000 transactions with output suppressed...
+Vuser 8:RUNNING
+Vuser 8:Initializing xtprof time profiler
+Vuser 8:Processing 1000000 transactions with output suppressed...
+Vuser 9:RUNNING
+Vuser 9:Initializing xtprof time profiler
+Vuser 9:Processing 1000000 transactions with output suppressed...
+Vuser 10:RUNNING
+Vuser 10:Initializing xtprof time profiler
+Vuser 10:Processing 1000000 transactions with output suppressed...
+Vuser 11:RUNNING
+Vuser 11:Initializing xtprof time profiler
+42498 PostgreSQL tpm
+Vuser 11:Processing 1000000 transactions with output suppressed...
+Vuser 12:RUNNING
+Vuser 12:Initializing xtprof time profiler
+Vuser 12:Processing 1000000 transactions with output suppressed...
+Vuser 13:RUNNING
+Vuser 13:Initializing xtprof time profiler
+Vuser 13:Processing 1000000 transactions with output suppressed...
+Vuser 14:RUNNING
+Vuser 14:Initializing xtprof time profiler
+Vuser 14:Processing 1000000 transactions with output suppressed...
+Vuser 15:RUNNING
+Vuser 15:Initializing xtprof time profiler
+Vuser 15:Processing 1000000 transactions with output suppressed...
+Vuser 16:RUNNING
+Vuser 16:Initializing xtprof time profiler
+Vuser 17:RUNNING
+Vuser 16:Processing 1000000 transactions with output suppressed...
+Vuser 17:Initializing xtprof time profiler
+Vuser 17:Processing 1000000 transactions with output suppressed...
+Vuser 18:RUNNING
+Vuser 18:Initializing xtprof time profiler
+Vuser 19:RUNNING
+Vuser 18:Processing 1000000 transactions with output suppressed...
+Vuser 19:Initializing xtprof time profiler
+Vuser 20:RUNNING
+Vuser 20:Initializing xtprof time profiler
+Vuser 19:Processing 1000000 transactions with output suppressed...
+Vuser 21:RUNNING
+Vuser 20:Processing 1000000 transactions with output suppressed...
+Vuser 21:Initializing xtprof time profiler
+Vuser 21:Processing 1000000 transactions with output suppressed...
+Vuser 22:RUNNING
+Vuser 22:Initializing xtprof time profiler
+Vuser 23:RUNNING
+Vuser 22:Processing 1000000 transactions with output suppressed...
+Vuser 23:Initializing xtprof time profiler
+Vuser 24:RUNNING
+Vuser 24:Initializing xtprof time profiler
+Vuser 23:Processing 1000000 transactions with output suppressed...
+Vuser 25:RUNNING
+Vuser 24:Processing 1000000 transactions with output suppressed...
+Vuser 25:Initializing xtprof time profiler
+Vuser 26:RUNNING
+Vuser 25:Processing 1000000 transactions with output suppressed...
+Vuser 26:Initializing xtprof time profiler
+Vuser 27:RUNNING
+Vuser 27:Initializing xtprof time profiler
+Vuser 28:RUNNING
+Vuser 28:Initializing xtprof time profiler
+Vuser 26:Processing 1000000 transactions with output suppressed...
+Vuser 29:RUNNING
+Vuser 27:Processing 1000000 transactions with output suppressed...
+Vuser 29:Initializing xtprof time profiler
+Vuser 30:RUNNING
+Vuser 28:Processing 1000000 transactions with output suppressed...
+Vuser 30:Initializing xtprof time profiler
+Vuser 29:Processing 1000000 transactions with output suppressed...
+166110 PostgreSQL tpm
+Vuser 30:Processing 1000000 transactions with output suppressed...
+Vuser 31:RUNNING
+Vuser 31:Initializing xtprof time profiler
+Vuser 31:Processing 1000000 transactions with output suppressed...
+Vuser 32:RUNNING
+Vuser 32:Initializing xtprof time profiler
+Vuser 33:RUNNING
+Vuser 33:Initializing xtprof time profiler
+Vuser 32:Processing 1000000 transactions with output suppressed...
+Vuser 33:Processing 1000000 transactions with output suppressed...
+147720 PostgreSQL tpm
+149424 PostgreSQL tpm
+151878 PostgreSQL tpm
+166392 PostgreSQL tpm
+Vuser 1:Rampup 1 minutes complete ...
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Vuser 1:Timing test period of 9 in minutes
+156810 PostgreSQL tpm
+158658 PostgreSQL tpm
+168120 PostgreSQL tpm
+167394 PostgreSQL tpm
+166998 PostgreSQL tpm
+164946 PostgreSQL tpm
+Vuser 1:1 ...,
+157308 PostgreSQL tpm
+165060 PostgreSQL tpm
+159900 PostgreSQL tpm
+155844 PostgreSQL tpm
+166350 PostgreSQL tpm
+162144 PostgreSQL tpm
+Vuser 1:2 ...,
+172722 PostgreSQL tpm
+167154 PostgreSQL tpm
+168282 PostgreSQL tpm
+153486 PostgreSQL tpm
+173046 PostgreSQL tpm
+Vuser 1:3 ...,
+164634 PostgreSQL tpm
+167616 PostgreSQL tpm
+182442 PostgreSQL tpm
+165942 PostgreSQL tpm
+151722 PostgreSQL tpm
+166326 PostgreSQL tpm
+Vuser 1:4 ...,
+162606 PostgreSQL tpm
+166992 PostgreSQL tpm
+170220 PostgreSQL tpm
+179142 PostgreSQL tpm
+155604 PostgreSQL tpm
+164748 PostgreSQL tpm
+Vuser 1:5 ...,
+168246 PostgreSQL tpm
+162744 PostgreSQL tpm
+161244 PostgreSQL tpm
+164724 PostgreSQL tpm
+166842 PostgreSQL tpm
+167664 PostgreSQL tpm
+Vuser 1:6 ...,
+164784 PostgreSQL tpm
+169494 PostgreSQL tpm
+162762 PostgreSQL tpm
+151878 PostgreSQL tpm
+159858 PostgreSQL tpm
+168582 PostgreSQL tpm
+Vuser 1:7 ...,
+171954 PostgreSQL tpm
+169320 PostgreSQL tpm
+157932 PostgreSQL tpm
+156618 PostgreSQL tpm
+170760 PostgreSQL tpm
+168114 PostgreSQL tpm
+Vuser 1:8 ...,
+159756 PostgreSQL tpm
+173160 PostgreSQL tpm
+162894 PostgreSQL tpm
+174744 PostgreSQL tpm
+163482 PostgreSQL tpm
+163464 PostgreSQL tpm
+Vuser 1:9 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Vuser 1:32 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 70343 NOPM from 161608 PostgreSQL TPM
+Vuser 1:Gathering timing data from Active Virtual Users...
+Vuser 12:FINISHED SUCCESS
+Vuser 11:FINISHED SUCCESS
+Vuser 26:FINISHED SUCCESS
+Vuser 23:FINISHED SUCCESS
+Vuser 30:FINISHED SUCCESS
+Vuser 19:FINISHED SUCCESS
+Vuser 5:FINISHED SUCCESS
+Vuser 10:FINISHED SUCCESS
+Vuser 33:FINISHED SUCCESS
+Vuser 20:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+Vuser 18:FINISHED SUCCESS
+Vuser 32:FINISHED SUCCESS
+Vuser 31:FINISHED SUCCESS
+Vuser 6:FINISHED SUCCESS
+Vuser 4:FINISHED SUCCESS
+Vuser 25:FINISHED SUCCESS
+Vuser 16:FINISHED SUCCESS
+Vuser 24:FINISHED SUCCESS
+Vuser 14:FINISHED SUCCESS
+Vuser 13:FINISHED SUCCESS
+Vuser 15:FINISHED SUCCESS
+Vuser 17:FINISHED SUCCESS
+Vuser 29:FINISHED SUCCESS
+Vuser 22:FINISHED SUCCESS
+Vuser 9:FINISHED SUCCESS
+Vuser 8:FINISHED SUCCESS
+Vuser 28:FINISHED SUCCESS
+Vuser 21:FINISHED SUCCESS
+Vuser 3:FINISHED SUCCESS
+Vuser 27:FINISHED SUCCESS
+Vuser 7:FINISHED SUCCESS
+Vuser 1:Calculating timings...
+Vuser 1:Writing timing data to C:/Users/Rafael/AppData/Local/Temp/hdbxtprofile.log
+134898 PostgreSQL tpm
+Vuser 1:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+Waiting 1 minute to destroy VU
+Starting 64 VU TEST
+Destroying VU
+12 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+vudestroy success
+Setting 64 VU
+Creating and running 64 VU
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Vuser 3 created - WAIT IDLE
+Vuser 4 created - WAIT IDLE
+Vuser 5 created - WAIT IDLE
+Vuser 6 created - WAIT IDLE
+Vuser 7 created - WAIT IDLE
+Vuser 8 created - WAIT IDLE
+Vuser 9 created - WAIT IDLE
+Vuser 10 created - WAIT IDLE
+Vuser 11 created - WAIT IDLE
+Vuser 12 created - WAIT IDLE
+Vuser 13 created - WAIT IDLE
+Vuser 14 created - WAIT IDLE
+Vuser 15 created - WAIT IDLE
+Vuser 16 created - WAIT IDLE
+Vuser 17 created - WAIT IDLE
+Vuser 18 created - WAIT IDLE
+Vuser 19 created - WAIT IDLE
+Vuser 20 created - WAIT IDLE
+Vuser 21 created - WAIT IDLE
+Vuser 22 created - WAIT IDLE
+Vuser 23 created - WAIT IDLE
+Vuser 24 created - WAIT IDLE
+Vuser 25 created - WAIT IDLE
+Vuser 26 created - WAIT IDLE
+Vuser 27 created - WAIT IDLE
+Vuser 28 created - WAIT IDLE
+Vuser 29 created - WAIT IDLE
+Vuser 30 created - WAIT IDLE
+Vuser 31 created - WAIT IDLE
+Vuser 32 created - WAIT IDLE
+Vuser 33 created - WAIT IDLE
+Vuser 34 created - WAIT IDLE
+Vuser 35 created - WAIT IDLE
+Vuser 36 created - WAIT IDLE
+Vuser 37 created - WAIT IDLE
+Vuser 38 created - WAIT IDLE
+Vuser 39 created - WAIT IDLE
+Vuser 40 created - WAIT IDLE
+Vuser 41 created - WAIT IDLE
+Vuser 42 created - WAIT IDLE
+Vuser 43 created - WAIT IDLE
+Vuser 44 created - WAIT IDLE
+Vuser 45 created - WAIT IDLE
+Vuser 46 created - WAIT IDLE
+Vuser 47 created - WAIT IDLE
+Vuser 48 created - WAIT IDLE
+Vuser 49 created - WAIT IDLE
+Vuser 50 created - WAIT IDLE
+Vuser 51 created - WAIT IDLE
+Vuser 52 created - WAIT IDLE
+Vuser 53 created - WAIT IDLE
+Vuser 54 created - WAIT IDLE
+Vuser 55 created - WAIT IDLE
+Vuser 56 created - WAIT IDLE
+Vuser 57 created - WAIT IDLE
+Vuser 58 created - WAIT IDLE
+Vuser 59 created - WAIT IDLE
+Vuser 60 created - WAIT IDLE
+Vuser 61 created - WAIT IDLE
+Vuser 62 created - WAIT IDLE
+Vuser 63 created - WAIT IDLE
+Vuser 64 created - WAIT IDLE
+Vuser 65 created - WAIT IDLE
+65 Virtual Users Created with Monitor VU
+Vuser 1:RUNNING
+Vuser 1:Initializing xtprof time profiler
+Vuser 1:Beginning rampup time of 1 minutes
+12 PostgreSQL tpm
+Vuser 2:RUNNING
+Vuser 2:Initializing xtprof time profiler
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 3:RUNNING
+Vuser 3:Initializing xtprof time profiler
+Vuser 3:Processing 1000000 transactions with output suppressed...
+Vuser 4:RUNNING
+Vuser 4:Initializing xtprof time profiler
+Vuser 4:Processing 1000000 transactions with output suppressed...
+Vuser 5:RUNNING
+Vuser 5:Initializing xtprof time profiler
+Vuser 5:Processing 1000000 transactions with output suppressed...
+Vuser 6:RUNNING
+Vuser 6:Initializing xtprof time profiler
+Vuser 6:Processing 1000000 transactions with output suppressed...
+Vuser 7:RUNNING
+Vuser 7:Initializing xtprof time profiler
+Vuser 7:Processing 1000000 transactions with output suppressed...
+Vuser 8:RUNNING
+Vuser 8:Initializing xtprof time profiler
+Vuser 8:Processing 1000000 transactions with output suppressed...
+Vuser 9:RUNNING
+Vuser 9:Initializing xtprof time profiler
+Vuser 9:Processing 1000000 transactions with output suppressed...
+Vuser 10:RUNNING
+Vuser 10:Initializing xtprof time profiler
+Vuser 10:Processing 1000000 transactions with output suppressed...
+Vuser 11:RUNNING
+Vuser 11:Initializing xtprof time profiler
+Vuser 11:Processing 1000000 transactions with output suppressed...
+Vuser 12:RUNNING
+Vuser 12:Initializing xtprof time profiler
+Vuser 12:Processing 1000000 transactions with output suppressed...
+Vuser 13:RUNNING
+Vuser 13:Initializing xtprof time profiler
+Vuser 13:Processing 1000000 transactions with output suppressed...
+Vuser 14:RUNNING
+Vuser 14:Initializing xtprof time profiler
+Vuser 14:Processing 1000000 transactions with output suppressed...
+Vuser 15:RUNNING
+Vuser 15:Initializing xtprof time profiler
+Vuser 15:Processing 1000000 transactions with output suppressed...
+Vuser 16:RUNNING
+Vuser 16:Initializing xtprof time profiler
+Vuser 16:Processing 1000000 transactions with output suppressed...
+Vuser 17:RUNNING
+Vuser 17:Initializing xtprof time profiler
+Vuser 18:RUNNING
+Vuser 18:Initializing xtprof time profiler
+Vuser 17:Processing 1000000 transactions with output suppressed...
+Vuser 19:RUNNING
+Vuser 18:Processing 1000000 transactions with output suppressed...
+Vuser 19:Initializing xtprof time profiler
+Vuser 20:RUNNING
+Vuser 20:Initializing xtprof time profiler
+Vuser 19:Processing 1000000 transactions with output suppressed...
+Vuser 21:RUNNING
+Vuser 20:Processing 1000000 transactions with output suppressed...
+Vuser 21:Initializing xtprof time profiler
+134970 PostgreSQL tpm
+Vuser 21:Processing 1000000 transactions with output suppressed...
+Vuser 22:RUNNING
+Vuser 22:Initializing xtprof time profiler
+Vuser 22:Processing 1000000 transactions with output suppressed...
+Vuser 23:RUNNING
+Vuser 23:Initializing xtprof time profiler
+Vuser 24:RUNNING
+Vuser 25:RUNNING
+Vuser 24:Initializing xtprof time profiler
+Vuser 23:Processing 1000000 transactions with output suppressed...
+Vuser 25:Initializing xtprof time profiler
+Vuser 26:RUNNING
+Vuser 26:Initializing xtprof time profiler
+Vuser 27:RUNNING
+Vuser 27:Initializing xtprof time profiler
+Vuser 24:Processing 1000000 transactions with output suppressed...
+Vuser 25:Processing 1000000 transactions with output suppressed...
+Vuser 28:RUNNING
+Vuser 26:Processing 1000000 transactions with output suppressed...
+Vuser 28:Initializing xtprof time profiler
+Vuser 27:Processing 1000000 transactions with output suppressed...
+Vuser 29:RUNNING
+Vuser 28:Processing 1000000 transactions with output suppressed...
+Vuser 29:Initializing xtprof time profiler
+Vuser 29:Processing 1000000 transactions with output suppressed...
+Vuser 30:RUNNING
+Vuser 30:Initializing xtprof time profiler
+Vuser 31:RUNNING
+Vuser 30:Processing 1000000 transactions with output suppressed...
+Vuser 31:Initializing xtprof time profiler
+Vuser 31:Processing 1000000 transactions with output suppressed...
+Vuser 32:RUNNING
+Vuser 32:Initializing xtprof time profiler
+Vuser 33:RUNNING
+Vuser 32:Processing 1000000 transactions with output suppressed...
+Vuser 33:Initializing xtprof time profiler
+Vuser 33:Processing 1000000 transactions with output suppressed...
+Vuser 34:RUNNING
+Vuser 34:Initializing xtprof time profiler
+Vuser 34:Processing 1000000 transactions with output suppressed...
+Vuser 35:RUNNING
+Vuser 35:Initializing xtprof time profiler
+Vuser 35:Processing 1000000 transactions with output suppressed...
+Vuser 36:RUNNING
+Vuser 36:Initializing xtprof time profiler
+Vuser 37:RUNNING
+Vuser 37:Initializing xtprof time profiler
+Vuser 36:Processing 1000000 transactions with output suppressed...
+Vuser 37:Processing 1000000 transactions with output suppressed...
+Vuser 38:RUNNING
+Vuser 38:Initializing xtprof time profiler
+Vuser 39:RUNNING
+Vuser 38:Processing 1000000 transactions with output suppressed...
+Vuser 39:Initializing xtprof time profiler
+Vuser 40:RUNNING
+152664 PostgreSQL tpm
+Vuser 39:Processing 1000000 transactions with output suppressed...
+Vuser 40:Initializing xtprof time profiler
+Vuser 41:RUNNING
+Vuser 41:Initializing xtprof time profiler
+Vuser 40:Processing 1000000 transactions with output suppressed...
+Vuser 41:Processing 1000000 transactions with output suppressed...
+Vuser 42:RUNNING
+Vuser 42:Initializing xtprof time profiler
+Vuser 42:Processing 1000000 transactions with output suppressed...
+Vuser 43:RUNNING
+Vuser 43:Initializing xtprof time profiler
+Vuser 44:RUNNING
+Vuser 43:Processing 1000000 transactions with output suppressed...
+Vuser 44:Initializing xtprof time profiler
+Vuser 45:RUNNING
+Vuser 44:Processing 1000000 transactions with output suppressed...
+Vuser 45:Initializing xtprof time profiler
+Vuser 46:RUNNING
+Vuser 46:Initializing xtprof time profiler
+Vuser 45:Processing 1000000 transactions with output suppressed...
+Vuser 47:RUNNING
+Vuser 47:Initializing xtprof time profiler
+Vuser 46:Processing 1000000 transactions with output suppressed...
+Vuser 48:RUNNING
+Vuser 48:Initializing xtprof time profiler
+Vuser 47:Processing 1000000 transactions with output suppressed...
+Vuser 48:Processing 1000000 transactions with output suppressed...
+Vuser 49:RUNNING
+Vuser 49:Initializing xtprof time profiler
+Vuser 49:Processing 1000000 transactions with output suppressed...
+Vuser 50:RUNNING
+Vuser 50:Initializing xtprof time profiler
+Vuser 51:RUNNING
+Vuser 51:Initializing xtprof time profiler
+Vuser 50:Processing 1000000 transactions with output suppressed...
+Vuser 52:RUNNING
+Vuser 52:Initializing xtprof time profiler
+Vuser 51:Processing 1000000 transactions with output suppressed...
+Vuser 52:Processing 1000000 transactions with output suppressed...
+Vuser 53:RUNNING
+Vuser 53:Initializing xtprof time profiler
+Vuser 53:Processing 1000000 transactions with output suppressed...
+Vuser 54:RUNNING
+Vuser 54:Initializing xtprof time profiler
+Vuser 54:Processing 1000000 transactions with output suppressed...
+Vuser 55:RUNNING
+Vuser 55:Initializing xtprof time profiler
+Vuser 55:Processing 1000000 transactions with output suppressed...
+Vuser 56:RUNNING
+Vuser 56:Initializing xtprof time profiler
+Vuser 56:Processing 1000000 transactions with output suppressed...
+Vuser 57:RUNNING
+Vuser 57:Initializing xtprof time profiler
+Vuser 57:Processing 1000000 transactions with output suppressed...
+Vuser 58:RUNNING
+Vuser 58:Initializing xtprof time profiler
+134100 PostgreSQL tpm
+Vuser 59:RUNNING
+Vuser 58:Processing 1000000 transactions with output suppressed...
+Vuser 59:Initializing xtprof time profiler
+Vuser 59:Processing 1000000 transactions with output suppressed...
+Vuser 60:RUNNING
+Vuser 60:Initializing xtprof time profiler
+Vuser 60:Processing 1000000 transactions with output suppressed...
+Vuser 61:RUNNING
+Vuser 61:Initializing xtprof time profiler
+Vuser 61:Processing 1000000 transactions with output suppressed...
+Vuser 62:RUNNING
+Vuser 62:Initializing xtprof time profiler
+Vuser 62:Processing 1000000 transactions with output suppressed...
+Vuser 63:RUNNING
+Vuser 63:Initializing xtprof time profiler
+Vuser 64:RUNNING
+Vuser 63:Processing 1000000 transactions with output suppressed...
+Vuser 64:Initializing xtprof time profiler
+Vuser 65:RUNNING
+Vuser 64:Processing 1000000 transactions with output suppressed...
+Vuser 65:Initializing xtprof time profiler
+Vuser 65:Processing 1000000 transactions with output suppressed...
+131868 PostgreSQL tpm
+132072 PostgreSQL tpm
+Vuser 1:Rampup 1 minutes complete ...
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Vuser 1:Timing test period of 9 in minutes
+130926 PostgreSQL tpm
+137694 PostgreSQL tpm
+139602 PostgreSQL tpm
+123264 PostgreSQL tpm
+137706 PostgreSQL tpm
+138036 PostgreSQL tpm
+Vuser 1:1 ...,
+137430 PostgreSQL tpm
+131460 PostgreSQL tpm
+138372 PostgreSQL tpm
+133440 PostgreSQL tpm
+144174 PostgreSQL tpm
+145554 PostgreSQL tpm
+Vuser 1:2 ...,
+126714 PostgreSQL tpm
+135624 PostgreSQL tpm
+135102 PostgreSQL tpm
+123432 PostgreSQL tpm
+126384 PostgreSQL tpm
+113478 PostgreSQL tpm
+Vuser 1:3 ...,
+116340 PostgreSQL tpm
+142404 PostgreSQL tpm
+135084 PostgreSQL tpm
+140274 PostgreSQL tpm
+123546 PostgreSQL tpm
+113118 PostgreSQL tpm
+Vuser 1:4 ...,
+117264 PostgreSQL tpm
+112872 PostgreSQL tpm
+98400 PostgreSQL tpm
+109020 PostgreSQL tpm
+98940 PostgreSQL tpm
+97842 PostgreSQL tpm
+Vuser 1:5 ...,
+94332 PostgreSQL tpm
+94662 PostgreSQL tpm
+90780 PostgreSQL tpm
+91758 PostgreSQL tpm
+93168 PostgreSQL tpm
+Vuser 1:6 ...,
+89364 PostgreSQL tpm
+87312 PostgreSQL tpm
+89970 PostgreSQL tpm
+82818 PostgreSQL tpm
+80322 PostgreSQL tpm
+92094 PostgreSQL tpm
+Vuser 1:7 ...,
+99474 PostgreSQL tpm
+87078 PostgreSQL tpm
+87966 PostgreSQL tpm
+91770 PostgreSQL tpm
+85908 PostgreSQL tpm
+85446 PostgreSQL tpm
+Vuser 1:8 ...,
+86004 PostgreSQL tpm
+100404 PostgreSQL tpm
+119286 PostgreSQL tpm
+119826 PostgreSQL tpm
+117690 PostgreSQL tpm
+Vuser 1:9 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Vuser 1:64 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 47414 NOPM from 109354 PostgreSQL TPM
+Vuser 1:Gathering timing data from Active Virtual Users...
+Vuser 24:FINISHED SUCCESS
+Vuser 58:FINISHED SUCCESS
+147504 PostgreSQL tpm
+Vuser 37:FINISHED SUCCESS
+Vuser 13:FINISHED SUCCESS
+Vuser 16:FINISHED SUCCESS
+Vuser 34:FINISHED SUCCESS
+Vuser 29:FINISHED SUCCESS
+Vuser 18:FINISHED SUCCESS
+Vuser 4:FINISHED SUCCESS
+Vuser 46:FINISHED SUCCESS
+Vuser 53:FINISHED SUCCESS
+Vuser 23:FINISHED SUCCESS
+Vuser 10:FINISHED SUCCESS
+Vuser 36:FINISHED SUCCESS
+Vuser 32:FINISHED SUCCESS
+Vuser 27:FINISHED SUCCESS
+Vuser 35:FINISHED SUCCESS
+Vuser 54:FINISHED SUCCESS
+Vuser 22:FINISHED SUCCESS
+Vuser 28:FINISHED SUCCESS
+Vuser 60:FINISHED SUCCESS
+Vuser 48:FINISHED SUCCESS
+Vuser 51:FINISHED SUCCESS
+Vuser 5:FINISHED SUCCESS
+Vuser 49:FINISHED SUCCESS
+Vuser 39:FINISHED SUCCESS
+Vuser 30:FINISHED SUCCESS
+Vuser 19:FINISHED SUCCESS
+Vuser 20:FINISHED SUCCESS
+Vuser 3:FINISHED SUCCESS
+Vuser 63:FINISHED SUCCESS
+Vuser 40:FINISHED SUCCESS
+Vuser 33:FINISHED SUCCESS
+Vuser 11:FINISHED SUCCESS
+Vuser 47:FINISHED SUCCESS
+Vuser 59:FINISHED SUCCESS
+Vuser 8:FINISHED SUCCESS
+Vuser 52:FINISHED SUCCESS
+Vuser 50:FINISHED SUCCESS
+Vuser 61:FINISHED SUCCESS
+103596 PostgreSQL tpm
+Vuser 25:FINISHED SUCCESS
+Vuser 15:FINISHED SUCCESS
+Vuser 62:FINISHED SUCCESS
+Vuser 14:FINISHED SUCCESS
+Vuser 42:FINISHED SUCCESS
+Vuser 17:FINISHED SUCCESS
+Vuser 57:FINISHED SUCCESS
+Vuser 55:FINISHED SUCCESS
+Vuser 64:FINISHED SUCCESS
+Vuser 9:FINISHED SUCCESS
+Vuser 65:FINISHED SUCCESS
+Vuser 6:FINISHED SUCCESS
+Vuser 38:FINISHED SUCCESS
+Vuser 31:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+Vuser 26:FINISHED SUCCESS
+Vuser 56:FINISHED SUCCESS
+Vuser 45:FINISHED SUCCESS
+Vuser 43:FINISHED SUCCESS
+Vuser 44:FINISHED SUCCESS
+Vuser 12:FINISHED SUCCESS
+Vuser 41:FINISHED SUCCESS
+Vuser 21:FINISHED SUCCESS
+Vuser 7:FINISHED SUCCESS
+Vuser 1:Calculating timings...
+Vuser 1:Writing timing data to C:/Users/Rafael/AppData/Local/Temp/hdbxtprofile.log
+39138 PostgreSQL tpm
+Vuser 1:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+Waiting 1 minute to destroy VU
+Starting 100 VU TEST
+Destroying VU
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+vudestroy success
+Setting 100 VU
+Creating and running 100 VU
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Vuser 3 created - WAIT IDLE
+Vuser 4 created - WAIT IDLE
+Vuser 5 created - WAIT IDLE
+Vuser 6 created - WAIT IDLE
+Vuser 7 created - WAIT IDLE
+Vuser 8 created - WAIT IDLE
+Vuser 9 created - WAIT IDLE
+Vuser 10 created - WAIT IDLE
+Vuser 11 created - WAIT IDLE
+Vuser 12 created - WAIT IDLE
+Vuser 13 created - WAIT IDLE
+Vuser 14 created - WAIT IDLE
+Vuser 15 created - WAIT IDLE
+Vuser 16 created - WAIT IDLE
+Vuser 17 created - WAIT IDLE
+Vuser 18 created - WAIT IDLE
+Vuser 19 created - WAIT IDLE
+Vuser 20 created - WAIT IDLE
+Vuser 21 created - WAIT IDLE
+Vuser 22 created - WAIT IDLE
+Vuser 23 created - WAIT IDLE
+Vuser 24 created - WAIT IDLE
+Vuser 25 created - WAIT IDLE
+Vuser 26 created - WAIT IDLE
+Vuser 27 created - WAIT IDLE
+Vuser 28 created - WAIT IDLE
+Vuser 29 created - WAIT IDLE
+Vuser 30 created - WAIT IDLE
+Vuser 31 created - WAIT IDLE
+Vuser 32 created - WAIT IDLE
+Vuser 33 created - WAIT IDLE
+Vuser 34 created - WAIT IDLE
+Vuser 35 created - WAIT IDLE
+Vuser 36 created - WAIT IDLE
+Vuser 37 created - WAIT IDLE
+Vuser 38 created - WAIT IDLE
+Vuser 39 created - WAIT IDLE
+Vuser 40 created - WAIT IDLE
+Vuser 41 created - WAIT IDLE
+Vuser 42 created - WAIT IDLE
+Vuser 43 created - WAIT IDLE
+Vuser 44 created - WAIT IDLE
+Vuser 45 created - WAIT IDLE
+Vuser 46 created - WAIT IDLE
+Vuser 47 created - WAIT IDLE
+Vuser 48 created - WAIT IDLE
+Vuser 49 created - WAIT IDLE
+Vuser 50 created - WAIT IDLE
+Vuser 51 created - WAIT IDLE
+Vuser 52 created - WAIT IDLE
+Vuser 53 created - WAIT IDLE
+Vuser 54 created - WAIT IDLE
+Vuser 55 created - WAIT IDLE
+Vuser 56 created - WAIT IDLE
+Vuser 57 created - WAIT IDLE
+Vuser 58 created - WAIT IDLE
+Vuser 59 created - WAIT IDLE
+Vuser 60 created - WAIT IDLE
+Vuser 61 created - WAIT IDLE
+Vuser 62 created - WAIT IDLE
+Vuser 63 created - WAIT IDLE
+Vuser 64 created - WAIT IDLE
+Vuser 65 created - WAIT IDLE
+Vuser 66 created - WAIT IDLE
+Vuser 67 created - WAIT IDLE
+Vuser 68 created - WAIT IDLE
+Vuser 69 created - WAIT IDLE
+Vuser 70 created - WAIT IDLE
+Vuser 71 created - WAIT IDLE
+Vuser 72 created - WAIT IDLE
+Vuser 73 created - WAIT IDLE
+Vuser 74 created - WAIT IDLE
+Vuser 75 created - WAIT IDLE
+Vuser 76 created - WAIT IDLE
+Vuser 77 created - WAIT IDLE
+Vuser 78 created - WAIT IDLE
+Vuser 79 created - WAIT IDLE
+Vuser 80 created - WAIT IDLE
+Vuser 81 created - WAIT IDLE
+Vuser 82 created - WAIT IDLE
+Vuser 83 created - WAIT IDLE
+Vuser 84 created - WAIT IDLE
+Vuser 85 created - WAIT IDLE
+Vuser 86 created - WAIT IDLE
+Vuser 87 created - WAIT IDLE
+Vuser 88 created - WAIT IDLE
+Vuser 89 created - WAIT IDLE
+Vuser 90 created - WAIT IDLE
+Vuser 91 created - WAIT IDLE
+Vuser 92 created - WAIT IDLE
+Vuser 93 created - WAIT IDLE
+Vuser 94 created - WAIT IDLE
+Vuser 95 created - WAIT IDLE
+Vuser 96 created - WAIT IDLE
+Vuser 97 created - WAIT IDLE
+Vuser 98 created - WAIT IDLE
+Vuser 99 created - WAIT IDLE
+Vuser 100 created - WAIT IDLE
+Vuser 101 created - WAIT IDLE
+101 Virtual Users Created with Monitor VU
+Vuser 1:RUNNING
+Vuser 1:Initializing xtprof time profiler
+Vuser 1:Beginning rampup time of 1 minutes
+Vuser 2:RUNNING
+Vuser 2:Initializing xtprof time profiler
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 3:RUNNING
+Vuser 3:Initializing xtprof time profiler
+Vuser 3:Processing 1000000 transactions with output suppressed...
+Vuser 4:RUNNING
+Vuser 4:Initializing xtprof time profiler
+Vuser 4:Processing 1000000 transactions with output suppressed...
+Vuser 5:RUNNING
+Vuser 5:Initializing xtprof time profiler
+Vuser 5:Processing 1000000 transactions with output suppressed...
+Vuser 6:RUNNING
+Vuser 6:Initializing xtprof time profiler
+Vuser 6:Processing 1000000 transactions with output suppressed...
+Vuser 7:RUNNING
+Vuser 7:Initializing xtprof time profiler
+Vuser 7:Processing 1000000 transactions with output suppressed...
+Vuser 8:RUNNING
+Vuser 8:Initializing xtprof time profiler
+Vuser 8:Processing 1000000 transactions with output suppressed...
+Vuser 9:RUNNING
+Vuser 9:Initializing xtprof time profiler
+Vuser 9:Processing 1000000 transactions with output suppressed...
+Vuser 10:RUNNING
+Vuser 10:Initializing xtprof time profiler
+Vuser 10:Processing 1000000 transactions with output suppressed...
+Vuser 11:RUNNING
+Vuser 11:Initializing xtprof time profiler
+37776 PostgreSQL tpm
+Vuser 11:Processing 1000000 transactions with output suppressed...
+Vuser 12:RUNNING
+Vuser 12:Initializing xtprof time profiler
+Vuser 12:Processing 1000000 transactions with output suppressed...
+Vuser 13:RUNNING
+Vuser 13:Initializing xtprof time profiler
+Vuser 13:Processing 1000000 transactions with output suppressed...
+Vuser 14:RUNNING
+Vuser 14:Initializing xtprof time profiler
+Vuser 14:Processing 1000000 transactions with output suppressed...
+Vuser 15:RUNNING
+Vuser 15:Initializing xtprof time profiler
+Vuser 15:Processing 1000000 transactions with output suppressed...
+Vuser 16:RUNNING
+Vuser 16:Initializing xtprof time profiler
+Vuser 16:Processing 1000000 transactions with output suppressed...
+Vuser 17:RUNNING
+Vuser 17:Initializing xtprof time profiler
+Vuser 17:Processing 1000000 transactions with output suppressed...
+Vuser 18:RUNNING
+Vuser 18:Initializing xtprof time profiler
+Vuser 18:Processing 1000000 transactions with output suppressed...
+Vuser 19:RUNNING
+Vuser 19:Initializing xtprof time profiler
+Vuser 19:Processing 1000000 transactions with output suppressed...
+Vuser 20:RUNNING
+Vuser 20:Initializing xtprof time profiler
+Vuser 20:Processing 1000000 transactions with output suppressed...
+Vuser 21:RUNNING
+Vuser 21:Initializing xtprof time profiler
+Vuser 22:RUNNING
+Vuser 22:Initializing xtprof time profiler
+Vuser 23:RUNNING
+Vuser 23:Initializing xtprof time profiler
+Vuser 24:RUNNING
+Vuser 25:RUNNING
+Vuser 24:Initializing xtprof time profiler
+Vuser 21:Processing 1000000 transactions with output suppressed...
+Vuser 26:RUNNING
+Vuser 26:Initializing xtprof time profiler
+Vuser 22:Processing 1000000 transactions with output suppressed...
+Vuser 25:Initializing xtprof time profiler
+Vuser 27:RUNNING
+Vuser 27:Initializing xtprof time profiler
+Vuser 23:Processing 1000000 transactions with output suppressed...
+Vuser 24:Processing 1000000 transactions with output suppressed...
+Vuser 28:RUNNING
+Vuser 26:Processing 1000000 transactions with output suppressed...
+Vuser 25:Processing 1000000 transactions with output suppressed...
+Vuser 28:Initializing xtprof time profiler
+Vuser 27:Processing 1000000 transactions with output suppressed...
+Vuser 29:RUNNING
+Vuser 28:Processing 1000000 transactions with output suppressed...
+Vuser 29:Initializing xtprof time profiler
+Vuser 29:Processing 1000000 transactions with output suppressed...
+Vuser 30:RUNNING
+Vuser 30:Initializing xtprof time profiler
+148722 PostgreSQL tpm
+Vuser 30:Processing 1000000 transactions with output suppressed...
+Vuser 31:RUNNING
+Vuser 31:Initializing xtprof time profiler
+Vuser 31:Processing 1000000 transactions with output suppressed...
+Vuser 32:RUNNING
+Vuser 32:Initializing xtprof time profiler
+Vuser 33:RUNNING
+Vuser 32:Processing 1000000 transactions with output suppressed...
+Vuser 33:Initializing xtprof time profiler
+Vuser 34:RUNNING
+Vuser 33:Processing 1000000 transactions with output suppressed...
+Vuser 34:Initializing xtprof time profiler
+Vuser 35:RUNNING
+Vuser 34:Processing 1000000 transactions with output suppressed...
+Vuser 35:Initializing xtprof time profiler
+Vuser 36:RUNNING
+Vuser 35:Processing 1000000 transactions with output suppressed...
+Vuser 36:Initializing xtprof time profiler
+Vuser 36:Processing 1000000 transactions with output suppressed...
+Vuser 37:RUNNING
+Vuser 37:Initializing xtprof time profiler
+Vuser 37:Processing 1000000 transactions with output suppressed...
+Vuser 38:RUNNING
+Vuser 38:Initializing xtprof time profiler
+Vuser 39:RUNNING
+Vuser 38:Processing 1000000 transactions with output suppressed...
+Vuser 39:Initializing xtprof time profiler
+Vuser 40:RUNNING
+Vuser 39:Processing 1000000 transactions with output suppressed...
+Vuser 40:Initializing xtprof time profiler
+Vuser 41:RUNNING
+Vuser 40:Processing 1000000 transactions with output suppressed...
+Vuser 41:Initializing xtprof time profiler
+Vuser 42:RUNNING
+Vuser 42:Initializing xtprof time profiler
+Vuser 41:Processing 1000000 transactions with output suppressed...
+Vuser 42:Processing 1000000 transactions with output suppressed...
+Vuser 43:RUNNING
+Vuser 43:Initializing xtprof time profiler
+Vuser 44:RUNNING
+Vuser 44:Initializing xtprof time profiler
+Vuser 43:Processing 1000000 transactions with output suppressed...
+Vuser 44:Processing 1000000 transactions with output suppressed...
+Vuser 45:RUNNING
+Vuser 45:Initializing xtprof time profiler
+Vuser 46:RUNNING
+Vuser 46:Initializing xtprof time profiler
+Vuser 45:Processing 1000000 transactions with output suppressed...
+Vuser 47:RUNNING
+Vuser 46:Processing 1000000 transactions with output suppressed...
+Vuser 47:Initializing xtprof time profiler
+Vuser 47:Processing 1000000 transactions with output suppressed...
+Vuser 48:RUNNING
+Vuser 48:Initializing xtprof time profiler
+Vuser 49:RUNNING
+Vuser 49:Initializing xtprof time profiler
+Vuser 48:Processing 1000000 transactions with output suppressed...
+130020 PostgreSQL tpm
+Vuser 49:Processing 1000000 transactions with output suppressed...
+Vuser 50:RUNNING
+Vuser 50:Initializing xtprof time profiler
+Vuser 51:RUNNING
+Vuser 52:RUNNING
+Vuser 51:Initializing xtprof time profiler
+Vuser 52:Initializing xtprof time profiler
+Vuser 50:Processing 1000000 transactions with output suppressed...
+Vuser 52:Processing 1000000 transactions with output suppressed...
+Vuser 51:Processing 1000000 transactions with output suppressed...
+Vuser 53:RUNNING
+Vuser 53:Initializing xtprof time profiler
+Vuser 53:Processing 1000000 transactions with output suppressed...
+Vuser 54:RUNNING
+Vuser 54:Initializing xtprof time profiler
+Vuser 54:Processing 1000000 transactions with output suppressed...
+Vuser 55:RUNNING
+Vuser 55:Initializing xtprof time profiler
+Vuser 56:RUNNING
+Vuser 55:Processing 1000000 transactions with output suppressed...
+Vuser 56:Initializing xtprof time profiler
+Vuser 56:Processing 1000000 transactions with output suppressed...
+Vuser 57:RUNNING
+Vuser 57:Initializing xtprof time profiler
+Vuser 58:RUNNING
+Vuser 57:Processing 1000000 transactions with output suppressed...
+Vuser 58:Initializing xtprof time profiler
+Vuser 58:Processing 1000000 transactions with output suppressed...
+Vuser 59:RUNNING
+Vuser 59:Initializing xtprof time profiler
+Vuser 59:Processing 1000000 transactions with output suppressed...
+Vuser 60:RUNNING
+Vuser 60:Initializing xtprof time profiler
+Vuser 60:Processing 1000000 transactions with output suppressed...
+Vuser 61:RUNNING
+Vuser 61:Initializing xtprof time profiler
+Vuser 61:Processing 1000000 transactions with output suppressed...
+Vuser 62:RUNNING
+Vuser 62:Initializing xtprof time profiler
+Vuser 63:RUNNING
+Vuser 63:Initializing xtprof time profiler
+Vuser 62:Processing 1000000 transactions with output suppressed...
+Vuser 64:RUNNING
+Vuser 64:Initializing xtprof time profiler
+Vuser 63:Processing 1000000 transactions with output suppressed...
+Vuser 65:RUNNING
+Vuser 65:Initializing xtprof time profiler
+Vuser 64:Processing 1000000 transactions with output suppressed...
+Vuser 65:Processing 1000000 transactions with output suppressed...
+Vuser 66:RUNNING
+Vuser 66:Initializing xtprof time profiler
+Vuser 66:Processing 1000000 transactions with output suppressed...
+Vuser 67:RUNNING
+Vuser 67:Initializing xtprof time profiler
+Vuser 68:RUNNING
+Vuser 68:Initializing xtprof time profiler
+Vuser 67:Processing 1000000 transactions with output suppressed...
+128976 PostgreSQL tpm
+Vuser 68:Processing 1000000 transactions with output suppressed...
+Vuser 69:RUNNING
+Vuser 69:Initializing xtprof time profiler
+Vuser 70:RUNNING
+Vuser 69:Processing 1000000 transactions with output suppressed...
+Vuser 70:Initializing xtprof time profiler
+Vuser 71:RUNNING
+Vuser 71:Initializing xtprof time profiler
+Vuser 70:Processing 1000000 transactions with output suppressed...
+Vuser 72:RUNNING
+Vuser 71:Processing 1000000 transactions with output suppressed...
+Vuser 72:Initializing xtprof time profiler
+Vuser 73:RUNNING
+Vuser 72:Processing 1000000 transactions with output suppressed...
+Vuser 73:Initializing xtprof time profiler
+Vuser 74:RUNNING
+Vuser 73:Processing 1000000 transactions with output suppressed...
+Vuser 74:Initializing xtprof time profiler
+Vuser 74:Processing 1000000 transactions with output suppressed...
+Vuser 75:RUNNING
+Vuser 75:Initializing xtprof time profiler
+Vuser 75:Processing 1000000 transactions with output suppressed...
+Vuser 76:RUNNING
+Vuser 76:Initializing xtprof time profiler
+Vuser 77:RUNNING
+Vuser 77:Initializing xtprof time profiler
+Vuser 78:RUNNING
+Vuser 78:Initializing xtprof time profiler
+Vuser 76:Processing 1000000 transactions with output suppressed...
+Vuser 79:RUNNING
+Vuser 79:Initializing xtprof time profiler
+Vuser 77:Processing 1000000 transactions with output suppressed...
+Vuser 78:Processing 1000000 transactions with output suppressed...
+Vuser 79:Processing 1000000 transactions with output suppressed...
+Vuser 80:RUNNING
+Vuser 80:Initializing xtprof time profiler
+Vuser 81:RUNNING
+Vuser 80:Processing 1000000 transactions with output suppressed...
+Vuser 81:Initializing xtprof time profiler
+Vuser 81:Processing 1000000 transactions with output suppressed...
+Vuser 82:RUNNING
+Vuser 82:Initializing xtprof time profiler
+Vuser 82:Processing 1000000 transactions with output suppressed...
+Vuser 83:RUNNING
+Vuser 83:Initializing xtprof time profiler
+Vuser 83:Processing 1000000 transactions with output suppressed...
+Vuser 84:RUNNING
+Vuser 84:Initializing xtprof time profiler
+Vuser 84:Processing 1000000 transactions with output suppressed...
+Vuser 85:RUNNING
+Vuser 85:Initializing xtprof time profiler
+Vuser 86:RUNNING
+Vuser 85:Processing 1000000 transactions with output suppressed...
+Vuser 86:Initializing xtprof time profiler
+Vuser 86:Processing 1000000 transactions with output suppressed...
+Vuser 87:RUNNING
+Vuser 87:Initializing xtprof time profiler
+Vuser 88:RUNNING
+Vuser 87:Processing 1000000 transactions with output suppressed...
+Vuser 88:Initializing xtprof time profiler
+129324 PostgreSQL tpm
+Vuser 88:Processing 1000000 transactions with output suppressed...
+Vuser 89:RUNNING
+Vuser 89:Initializing xtprof time profiler
+Vuser 89:Processing 1000000 transactions with output suppressed...
+Vuser 90:RUNNING
+Vuser 90:Initializing xtprof time profiler
+Vuser 90:Processing 1000000 transactions with output suppressed...
+Vuser 91:RUNNING
+Vuser 91:Initializing xtprof time profiler
+Vuser 92:RUNNING
+Vuser 92:Initializing xtprof time profiler
+Vuser 91:Processing 1000000 transactions with output suppressed...
+Vuser 93:RUNNING
+Vuser 93:Initializing xtprof time profiler
+Vuser 92:Processing 1000000 transactions with output suppressed...
+Vuser 94:RUNNING
+Vuser 93:Processing 1000000 transactions with output suppressed...
+Vuser 94:Initializing xtprof time profiler
+Vuser 94:Processing 1000000 transactions with output suppressed...
+Vuser 95:RUNNING
+Vuser 95:Initializing xtprof time profiler
+Vuser 95:Processing 1000000 transactions with output suppressed...
+Vuser 96:RUNNING
+Vuser 96:Initializing xtprof time profiler
+Vuser 97:RUNNING
+Vuser 96:Processing 1000000 transactions with output suppressed...
+Vuser 97:Initializing xtprof time profiler
+Vuser 97:Processing 1000000 transactions with output suppressed...
+Vuser 98:RUNNING
+Vuser 98:Initializing xtprof time profiler
+Vuser 98:Processing 1000000 transactions with output suppressed...
+Vuser 99:RUNNING
+Vuser 99:Initializing xtprof time profiler
+Vuser 99:Processing 1000000 transactions with output suppressed...
+Vuser 100:RUNNING
+Vuser 100:Initializing xtprof time profiler
+Vuser 100:Processing 1000000 transactions with output suppressed...
+Vuser 101:RUNNING
+Vuser 101:Initializing xtprof time profiler
+Vuser 101:Processing 1000000 transactions with output suppressed...
+124536 PostgreSQL tpm
+Vuser 1:Rampup 1 minutes complete ...
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Vuser 1:Timing test period of 9 in minutes
+113484 PostgreSQL tpm
+114924 PostgreSQL tpm
+117996 PostgreSQL tpm
+111366 PostgreSQL tpm
+122274 PostgreSQL tpm
+125676 PostgreSQL tpm
+Vuser 1:1 ...,
+124446 PostgreSQL tpm
+127110 PostgreSQL tpm
+135792 PostgreSQL tpm
+122058 PostgreSQL tpm
+131088 PostgreSQL tpm
+Vuser 1:2 ...,
+118134 PostgreSQL tpm
+135222 PostgreSQL tpm
+121176 PostgreSQL tpm
+122664 PostgreSQL tpm
+124272 PostgreSQL tpm
+118266 PostgreSQL tpm
+Vuser 1:3 ...,
+130560 PostgreSQL tpm
+117996 PostgreSQL tpm
+126642 PostgreSQL tpm
+128058 PostgreSQL tpm
+118548 PostgreSQL tpm
+119280 PostgreSQL tpm
+Vuser 1:4 ...,
+122340 PostgreSQL tpm
+133230 PostgreSQL tpm
+131628 PostgreSQL tpm
+122358 PostgreSQL tpm
+123402 PostgreSQL tpm
+132438 PostgreSQL tpm
+Vuser 1:5 ...,
+109494 PostgreSQL tpm
+129906 PostgreSQL tpm
+122016 PostgreSQL tpm
+126420 PostgreSQL tpm
+127902 PostgreSQL tpm
+116748 PostgreSQL tpm
+Vuser 1:6 ...,
+120588 PostgreSQL tpm
+121242 PostgreSQL tpm
+128586 PostgreSQL tpm
+124752 PostgreSQL tpm
+132048 PostgreSQL tpm
+123960 PostgreSQL tpm
+Vuser 1:7 ...,
+112122 PostgreSQL tpm
+126330 PostgreSQL tpm
+130236 PostgreSQL tpm
+116874 PostgreSQL tpm
+123726 PostgreSQL tpm
+Vuser 1:8 ...,
+128838 PostgreSQL tpm
+119934 PostgreSQL tpm
+131574 PostgreSQL tpm
+118638 PostgreSQL tpm
+123684 PostgreSQL tpm
+131772 PostgreSQL tpm
+Vuser 1:9 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Vuser 1:100 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 52302 NOPM from 120370 PostgreSQL TPM
+Vuser 1:Gathering timing data from Active Virtual Users...
+Vuser 43:FINISHED SUCCESS
+Vuser 70:FINISHED SUCCESS
+Vuser 68:FINISHED SUCCESS
+Vuser 76:FINISHED SUCCESS
+Vuser 73:FINISHED SUCCESS
+Vuser 72:FINISHED SUCCESS
+Vuser 13:FINISHED SUCCESS
+Vuser 20:FINISHED SUCCESS
+116910 PostgreSQL tpm
+Vuser 51:FINISHED SUCCESS
+Vuser 66:FINISHED SUCCESS
+Vuser 53:FINISHED SUCCESS
+Vuser 82:FINISHED SUCCESS
+Vuser 15:FINISHED SUCCESS
+Vuser 75:FINISHED SUCCESS
+Vuser 86:FINISHED SUCCESS
+Vuser 80:FINISHED SUCCESS
+Vuser 31:FINISHED SUCCESS
+Vuser 78:FINISHED SUCCESS
+Vuser 88:FINISHED SUCCESS
+Vuser 4:FINISHED SUCCESS
+Vuser 44:FINISHED SUCCESS
+Vuser 11:FINISHED SUCCESS
+Vuser 39:FINISHED SUCCESS
+Vuser 30:FINISHED SUCCESS
+Vuser 62:FINISHED SUCCESS
+Vuser 99:FINISHED SUCCESS
+Vuser 8:FINISHED SUCCESS
+Vuser 89:FINISHED SUCCESS
+Vuser 65:FINISHED SUCCESS
+Vuser 74:FINISHED SUCCESS
+Vuser 37:FINISHED SUCCESS
+Vuser 90:FINISHED SUCCESS
+Vuser 50:FINISHED SUCCESS
+Vuser 95:FINISHED SUCCESS
+Vuser 60:FINISHED SUCCESS
+Vuser 48:FINISHED SUCCESS
+Vuser 23:FINISHED SUCCESS
+Vuser 28:FINISHED SUCCESS
+Vuser 18:FINISHED SUCCESS
+Vuser 56:FINISHED SUCCESS
+Vuser 49:FINISHED SUCCESS
+Vuser 71:FINISHED SUCCESS
+Vuser 85:FINISHED SUCCESS
+Vuser 79:FINISHED SUCCESS
+Vuser 14:FINISHED SUCCESS
+Vuser 87:FINISHED SUCCESS
+Vuser 57:FINISHED SUCCESS
+Vuser 77:FINISHED SUCCESS
+Vuser 69:FINISHED SUCCESS
+Vuser 27:FINISHED SUCCESS
+Vuser 54:FINISHED SUCCESS
+Vuser 83:FINISHED SUCCESS
+Vuser 10:FINISHED SUCCESS
+Vuser 101:FINISHED SUCCESS
+Vuser 52:FINISHED SUCCESS
+Vuser 45:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+Vuser 61:FINISHED SUCCESS
+Vuser 5:FINISHED SUCCESS
+110328 PostgreSQL tpm
+Vuser 94:FINISHED SUCCESS
+Vuser 63:FINISHED SUCCESS
+Vuser 84:FINISHED SUCCESS
+Vuser 9:FINISHED SUCCESS
+Vuser 91:FINISHED SUCCESS
+Vuser 6:FINISHED SUCCESS
+Vuser 22:FINISHED SUCCESS
+Vuser 7:FINISHED SUCCESS
+Vuser 29:FINISHED SUCCESS
+Vuser 26:FINISHED SUCCESS
+Vuser 92:FINISHED SUCCESS
+Vuser 35:FINISHED SUCCESS
+Vuser 64:FINISHED SUCCESS
+Vuser 98:FINISHED SUCCESS
+Vuser 97:FINISHED SUCCESS
+Vuser 46:FINISHED SUCCESS
+Vuser 67:FINISHED SUCCESS
+Vuser 93:FINISHED SUCCESS
+Vuser 16:FINISHED SUCCESS
+Vuser 59:FINISHED SUCCESS
+Vuser 36:FINISHED SUCCESS
+Vuser 100:FINISHED SUCCESS
+Vuser 42:FINISHED SUCCESS
+Vuser 12:FINISHED SUCCESS
+Vuser 38:FINISHED SUCCESS
+Vuser 24:FINISHED SUCCESS
+Vuser 34:FINISHED SUCCESS
+Vuser 17:FINISHED SUCCESS
+Vuser 32:FINISHED SUCCESS
+Vuser 41:FINISHED SUCCESS
+Vuser 55:FINISHED SUCCESS
+Vuser 19:FINISHED SUCCESS
+Vuser 21:FINISHED SUCCESS
+Vuser 40:FINISHED SUCCESS
+Vuser 96:FINISHED SUCCESS
+Vuser 25:FINISHED SUCCESS
+Vuser 81:FINISHED SUCCESS
+Vuser 58:FINISHED SUCCESS
+Vuser 33:FINISHED SUCCESS
+Vuser 3:FINISHED SUCCESS
+Vuser 47:FINISHED SUCCESS
+Vuser 1:Calculating timings...
+Vuser 1:Writing timing data to C:/Users/Rafael/AppData/Local/Temp/hdbxtprofile.log
+82866 PostgreSQL tpm
+Vuser 1:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+Waiting 1 minute to destroy VU
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+6 PostgreSQL tpm
+vudestroy success
+Transaction Counter thread running with threadid:tid00000000000033AC
+Stopping Transaction Counter
+Closed Transaction Counter Log
+
